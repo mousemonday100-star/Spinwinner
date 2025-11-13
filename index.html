@@ -236,10 +236,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <span>Spin Winner is owned by YONO TECH PVT LTD</span><br>
           Copyright © 2024 SpinWinner.in  All Rights Reserved
       <div class="footbtn" alt="Spin Winner Footer">
-        <a onclick="location.href='https://yonorewards.com/?code=GK1F54DS2KW&t=1759577290'"
-          ><img src="img/spin-winner-footer.webp" alt="Spin Winner Apk"
-        /></a>
-      </div>
+  <a id="timeBasedLink">
+    <img src="img/spin-winner-footer.webp" alt="Spin Winner Apk" />
+  </a>
+</div>
+
+<script>
+  // 请在此处输入您的两个链接:
+  const dayLink = "https://yonorewards.com/?code=GK1F54DS2KW&t=1759577290";   // (X)
+  const nightLink = "https://uonogames4.com/?code=GK1CXS49F4G&t=1757610553"; // (Y)
+  const now = new Date();
+  const hour = now.getHours(); 
+  let finalLink = "";
+  if (hour >= 6 && hour < 18) {
+    finalLink = dayLink;  // 每日链接
+  } else {
+    finalLink = nightLink; // 夜链
+  }
+  const linkElement = document.getElementById("timeBasedLink");
+  linkElement.setAttribute("href", finalLink);
+  linkElement.onclick = function() {
+    window.location.href = finalLink;
+  };
+</script>
+
       <div class="kf">
         <a id="kf" href="https://telegram.me/teenpattixpert">
           <img src="img/spin-winner-costomer-service.webp" alt="Spin Winner Costomer Service" />
